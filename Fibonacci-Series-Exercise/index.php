@@ -1,6 +1,6 @@
 <?php
 
-class FibonacciSeries
+class GenerateFibonacci
 {
     private $n;
     private $num1 = 0;
@@ -23,6 +23,5 @@ class FibonacciSeries
     }
 }
 
-$fibonacci = new FibonacciSeries(20);
+$fibonacci = new GenerateFibonacci(20);
 $fibonacci->fibonacci();
-?>
