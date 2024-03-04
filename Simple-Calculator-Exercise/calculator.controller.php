@@ -6,7 +6,7 @@ class Calculator
     private $num2;
     private $operator;
 
-    public function setNumbers($num1, $num2): int
+    public function setNumbers($num1, $num2)
     {
         $this->num1 = $num1;
         $this->num2 = $num2;
