@@ -2,7 +2,7 @@
 
 namespace MyApp\Controllers;
 
-require '../Models/login.model.php';
+require 'Models/login.model.php';
 
 use MyApp\Models;
 
