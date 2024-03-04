@@ -1,21 +1,26 @@
 <?php
 
-class Calculator {
+class Calculator
+{
     private $num1;
     private $num2;
     private $operator;
 
-    public function setNumbers($num1, $num2) {
+    public function setNumbers($num1, $num2): int
+    {
         $this->num1 = $num1;
         $this->num2 = $num2;
     }
 
-    public function setOperator($operator) {
+    public function setOperator($operator)
+    {
         $this->operator = $operator;
     }
 
-    public function calculate() {
-        switch ($this->operator) {
+    public function calculate(): int
+    {
+        switch ($this->operator)
+        {
             case 'add':
                 return $this->num1 + $this->num2;
             case 'subtract':

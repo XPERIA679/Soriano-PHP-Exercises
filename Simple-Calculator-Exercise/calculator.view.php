@@ -52,7 +52,8 @@
 
     <?php
 
-    if (isset($_POST['calculate'])) {
+    if (isset($_POST['calculate']))
+    {
         $calculator = new Calculator();
         $calculator->setNumbers($_POST['num1'], $_POST['num2']);
         $calculator->setOperator($_POST['operator']);
