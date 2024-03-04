@@ -1,22 +1,26 @@
 <?php
 
-class SortNumbers {
-
+class SortNumbers
+{
     private $numbers;
 
-    public function __construct($numbers) {
+    public function __construct($numbers)
+    {
         $this->numbers = $numbers;
     }
 
-    public function ascendingSort() {
+    public function ascendingSort()
+    {
         sort($this->numbers);
     }
 
-    public function descendingSort() {
+    public function descendingSort()
+    {
         rsort($this->numbers);
     }
 
-    public function displaySorted() {
+    public function displaySorted()
+    {
         return $this->numbers;
     }
 }
