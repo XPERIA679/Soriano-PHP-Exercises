@@ -1,3 +1,5 @@
+<?php require_once 'login.controller.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,6 @@
 <div class="login">
 
     <?php
-    require_once 'login.controller.php';
     
     $loginController = new LoginController();
     $loginResult = $loginController->handleLogin();

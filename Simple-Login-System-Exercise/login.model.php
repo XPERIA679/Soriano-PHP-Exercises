@@ -1,6 +1,7 @@
 <?php
 
-class User {
+class User
+{
     private $username = 'admin';
     private $password = 'admin123';
 

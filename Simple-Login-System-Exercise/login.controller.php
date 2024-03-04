@@ -2,7 +2,8 @@
 
 require_once 'login.model.php';
 
-class LoginController {
+class LoginController
+{
     private $userModel;
 
     public function __construct() {
@@ -27,5 +28,3 @@ class LoginController {
         return $result;
     }
 }
-
-?>
