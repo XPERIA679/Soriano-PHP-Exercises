@@ -1,26 +1,34 @@
-<?php
+<?php 
 
-require_once 'login.model.php';
+namespace MyApp\Controllers;
 
-class LoginController {
+require '../Models/login.model.php';
+
+use MyApp\Models;
+
+class LoginController
+{
     private $userModel;
     private $data;
     private $errors = [];
     private static $fields = ['username', 'password'];
 
-    public function __construct($post_data) {
+    public function __construct($post_data)
+    {
         $this->data = $post_data;
-        $this->userModel = new User();
+        $this->userModel = new Models\User();
     }
 
-    public function handleLogin() {
+    public function handleLogin()
+    {
         $result = ['success' => false, 'message' => ''];
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $username = $_POST['username'];
             $password = $_POST['password'];
 
-            if ($this->userModel->validateCredentials($username, $password)) {
+            if ($this->userModel->validateCredentials($username, $password))
+            {
                 $result['success'] = true;
             } else {
                 $result['message'] = 'Invalid credentials. Please try again.';
@@ -31,10 +39,12 @@ class LoginController {
         return $result;
     }
 
-    public function validateForm() {
-        foreach (self::$fields as $field) {
-            if (!isset($this->data[$field])) {
-                // trigger_error("$field is not present in data");
+    public function validateForm()
+    {
+        foreach (self::$fields as $field)
+        {
+            if (!isset($this->data[$field]))
+            {
                 return;
             }
         }
@@ -44,17 +54,20 @@ class LoginController {
         return $this->errors;
     }
 
-    private function validateUsername() {
+    private function validateUsername()
+    {
 
         $val = trim($this->data['username']);
 
-        if(empty($val)) {
+        if(empty($val))
+        {
             $this->addError('username', 'username cannot be empty'); 
         }
 
     }
 
-    private function validatePassword() {
+    private function validatePassword()
+    {
 
         $val = trim($this->data['password']);
 
@@ -64,7 +77,8 @@ class LoginController {
 
     }
 
-    private function addError($key, $val) {
+    private function addError($key, $val)
+    {
         $this->errors[$key] = $val;
     }
 }
