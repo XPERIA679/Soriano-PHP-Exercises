@@ -1,4 +1,4 @@
-<?php require_once 'login.controller.php'; ?>
+<?php use src\Controllers\LoginController; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +24,7 @@
     }
     ?>
     
-    <form action="login.view.php" method="post">
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username"><br>
         

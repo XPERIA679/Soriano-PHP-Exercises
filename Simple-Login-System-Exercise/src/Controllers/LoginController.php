@@ -1,6 +1,8 @@
 <?php
 
-require_once 'login.model.php';
+namespace src\Controllers;
+
+use src\Models\LoginModel;
 
 class LoginController
 {
@@ -8,7 +10,7 @@ class LoginController
 
     public function __construct()
     {
-        $this->userModel = new User();
+        $this->userModel = new LoginModel();
     }
 
     public function handleLogin()
