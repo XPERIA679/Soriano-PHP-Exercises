@@ -1,10 +1,8 @@
 <?php 
 
-namespace MyApp\Controllers;
+namespace src\Controllers;
 
-require 'Models/login.model.php';
-
-use MyApp\Models;
+use src\Models\LoginModel;
 
 class LoginController
 {
@@ -16,7 +14,7 @@ class LoginController
     public function __construct($post_data)
     {
         $this->data = $post_data;
-        $this->userModel = new Models\User();
+        $this->userModel = new LoginModel();
     }
 
     public function handleLogin()

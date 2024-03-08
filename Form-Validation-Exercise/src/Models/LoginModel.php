@@ -1,8 +1,8 @@
 <?php
 
-namespace MyApp\Models;
+namespace src\Models;
 
-class User
+class LoginModel
 {
     private $username = 'admin';
     private $password = 'admin123';

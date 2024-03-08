@@ -1,4 +1,4 @@
-<?php require 'Controllers/login.controller.php'; ?>
+<?php use src\Controllers\LoginController; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
 
     <?php
     
-    $loginController = new MyApp\Controllers\LoginController(isset($_POST) ? $_POST : []);
+    $loginController = new LoginController(isset($_POST) ? $_POST : []);
     $loginResult = $loginController->handleLogin();
     $errors = $loginController->validateForm();
 
