@@ -2,6 +2,8 @@
 
 namespace src\Views;
 
+date_default_timezone_set('asia/manila');
+
 class DateTimeView
 {
     public function renderDateTime($dateOne, $dateTwo, $dateThree, $dateFour,
